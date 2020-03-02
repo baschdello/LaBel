@@ -1,1 +1,0 @@
-avrdude: safemode: Fuses OK (E:FF, H:DF, L:7F)
