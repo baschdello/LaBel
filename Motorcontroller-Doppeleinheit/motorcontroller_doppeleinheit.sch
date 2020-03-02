@@ -16305,7 +16305,7 @@ Option B</text>
 <attribute name="NAME" x="124.079" y="85.344" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="129.159" y="82.804" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R3" gate="G$1" x="152.4" y="160.02"/>
+<instance part="R3" gate="G$1" x="154.94" y="157.48"/>
 <instance part="C5" gate="G$1" x="185.42" y="104.14" smashed="yes" rot="R180">
 <attribute name="NAME" x="183.896" y="103.759" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="183.896" y="108.839" size="1.778" layer="96" rot="R180"/>
@@ -16532,8 +16532,7 @@ Option B</text>
 <pinref part="P+11" gate="1" pin="+5V"/>
 <wire x1="162.56" y1="149.86" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="160.02" x2="160.02" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="160.02" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="157.48" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
 <junction x="160.02" y="149.86"/>
 </segment>
 <segment>
@@ -16607,8 +16606,8 @@ Option B</text>
 <wire x1="139.7" y1="149.86" x2="137.16" y2="149.86" width="0.1524" layer="91"/>
 <label x="137.16" y="149.86" size="1.016" layer="95" rot="R180" xref="yes"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="147.32" y1="160.02" x2="139.7" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="160.02" x2="139.7" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="157.48" x2="139.7" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="157.48" x2="139.7" y2="149.86" width="0.1524" layer="91"/>
 <junction x="139.7" y="149.86"/>
 </segment>
 <segment>
