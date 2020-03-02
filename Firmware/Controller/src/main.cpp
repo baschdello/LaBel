@@ -19,7 +19,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if( PINB & (1 << PB1) )
+  if( !(PINB & (1 << PB1)) )
   {
     //Polygon-Motor laufen lassen
     PORTB &= ~(1 << PB0);
