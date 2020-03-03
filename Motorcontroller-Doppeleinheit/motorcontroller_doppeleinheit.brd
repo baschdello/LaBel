@@ -1197,6 +1197,34 @@ grid 5.08 mm, diameter 6 mm</description>
 <text x="3.048" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="0.254" y1="-1.016" x2="0.762" y2="1.016" layer="21"/>
 </package>
+<package name="0411/15">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
+type 0411, grid 15 mm</description>
+<wire x1="5.08" y1="-1.651" x2="5.08" y2="1.651" width="0.1524" layer="21"/>
+<wire x1="4.699" y1="2.032" x2="5.08" y2="1.651" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-5.08" y1="-1.651" x2="-4.699" y2="-2.032" width="0.1524" layer="21" curve="90"/>
+<wire x1="4.699" y1="-2.032" x2="5.08" y2="-1.651" width="0.1524" layer="21" curve="90"/>
+<wire x1="-5.08" y1="1.651" x2="-4.699" y2="2.032" width="0.1524" layer="21" curve="-90"/>
+<wire x1="4.699" y1="2.032" x2="4.064" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="3.937" y1="1.905" x2="4.064" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="4.699" y1="-2.032" x2="4.064" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="3.937" y1="-1.905" x2="4.064" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="-3.937" y1="1.905" x2="-4.064" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="-3.937" y1="1.905" x2="3.937" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-3.937" y1="-1.905" x2="-4.064" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="-3.937" y1="-1.905" x2="3.937" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-5.08" y1="1.651" x2="-5.08" y2="-1.651" width="0.1524" layer="21"/>
+<wire x1="-4.699" y1="2.032" x2="-4.064" y2="2.032" width="0.1524" layer="21"/>
+<wire x1="-4.699" y1="-2.032" x2="-4.064" y2="-2.032" width="0.1524" layer="21"/>
+<wire x1="-7.62" y1="0" x2="-6.35" y2="0" width="0.762" layer="51"/>
+<wire x1="6.35" y1="0" x2="7.62" y2="0" width="0.762" layer="51"/>
+<pad name="1" x="-7.62" y="0" drill="0.9144" shape="octagon"/>
+<pad name="2" x="7.62" y="0" drill="0.9144" shape="octagon"/>
+<text x="-5.08" y="2.413" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.5814" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="5.08" y1="-0.381" x2="6.477" y2="0.381" layer="21"/>
+<rectangle x1="-6.477" y1="-0.381" x2="-5.08" y2="0.381" layer="21"/>
+</package>
 </packages>
 </library>
 <library name="avr-7">
@@ -2027,6 +2055,7 @@ Low profile connectors, straight&lt;p&gt;
 <element name="C4" library="rcl" package="C1206" value="22pF" x="26.67" y="43.18" rot="MR180"/>
 <element name="R3" library="rcl" package="R1206" value="10k" x="58.42" y="7.62" rot="MR0"/>
 <element name="C5" library="rcl" package="C1206" value="1n" x="41.275" y="33.02" rot="MR270"/>
+<element name="R4" library="rcl" package="0411/15" value="1,2Ohm 1W" x="6.35" y="-19.05"/>
 </elements>
 <signals>
 <signal name="SPEED_CLK">
@@ -2210,7 +2239,6 @@ Low profile connectors, straight&lt;p&gt;
 <contactref element="CONTROLLER1" pad="3"/>
 <contactref element="CONTROLLER2" pad="4"/>
 <contactref element="CONTROLLER2" pad="3"/>
-<contactref element="U$2" pad="IN+"/>
 <wire x1="60.96" y1="41.91" x2="58.42" y2="41.91" width="0.8128" layer="1"/>
 <wire x1="58.42" y1="41.91" x2="53.34" y2="41.91" width="0.8128" layer="1"/>
 <wire x1="53.34" y1="41.91" x2="40.64" y2="41.91" width="0.8128" layer="1"/>
@@ -2219,7 +2247,8 @@ Low profile connectors, straight&lt;p&gt;
 <wire x1="54.61" y1="20.32" x2="53.34" y2="21.59" width="0.8128" layer="1"/>
 <wire x1="53.34" y1="21.59" x2="53.34" y2="41.91" width="0.8128" layer="1"/>
 <wire x1="40.64" y1="41.91" x2="36.83" y2="45.72" width="0.8128" layer="1"/>
-<wire x1="36.83" y1="45.72" x2="36.83" y2="48.26" width="0.8128" layer="1"/>
+<contactref element="R4" pad="2"/>
+<wire x1="13.97" y1="-19.05" x2="54.61" y2="20.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+24V">
 <contactref element="MOTOR_PCB" pad="5"/>
@@ -2431,6 +2460,11 @@ Low profile connectors, straight&lt;p&gt;
 <wire x1="18.034" y1="36.83" x2="18.034" y2="35.306" width="0.254" layer="16"/>
 <wire x1="18.034" y1="35.306" x2="19.05" y2="34.29" width="0.254" layer="16"/>
 <wire x1="19.05" y1="34.29" x2="20.32" y2="34.29" width="0.254" layer="16"/>
+</signal>
+<signal name="N$6">
+<contactref element="U$2" pad="IN+"/>
+<contactref element="R4" pad="1"/>
+<wire x1="-1.27" y1="-19.05" x2="36.83" y2="48.26" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

@@ -16212,6 +16212,7 @@ Low profile connectors, straight&lt;p&gt;
 <part name="R3" library="rcl" deviceset="R-EU_" device="R1206" value="10k"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C1206" value="1n"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="0411/15" value="1,2Ohm 1W"/>
 </parts>
 <sheets>
 <sheet>
@@ -16294,7 +16295,7 @@ Option B</text>
 <instance part="P+14" gate="1" x="203.2" y="86.36"/>
 <instance part="GND13" gate="1" x="226.06" y="86.36" rot="R180"/>
 <instance part="GND14" gate="1" x="203.2" y="66.04"/>
-<instance part="P+4" gate="1" x="175.26" y="157.48"/>
+<instance part="P+4" gate="1" x="170.18" y="170.18"/>
 <instance part="GND4" gate="1" x="175.26" y="142.24"/>
 <instance part="Q1" gate="G$1" x="132.08" y="91.44" rot="R90"/>
 <instance part="C3" gate="G$1" x="124.46" y="93.98" smashed="yes" rot="R90">
@@ -16311,6 +16312,7 @@ Option B</text>
 <attribute name="VALUE" x="183.896" y="108.839" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND3" gate="1" x="185.42" y="111.76" rot="R180"/>
+<instance part="R4" gate="G$1" x="170.18" y="162.56" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -16571,8 +16573,8 @@ Option B</text>
 <junction x="68.58" y="58.42"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="IN+"/>
 <pinref part="P+4" gate="1" pin="+12V"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="+24V" class="0">
@@ -16797,6 +16799,14 @@ Option B</text>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="132.08" y1="93.98" x2="129.54" y2="93.98" width="0.1524" layer="91"/>
 <junction x="132.08" y="93.98"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="IN+"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="154.94" x2="170.18" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="154.94" x2="170.18" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
